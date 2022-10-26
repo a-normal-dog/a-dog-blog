@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - feature/add-the-dogs
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }}
@@ -10,6 +11,10 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
 
       - name: Install and Build 🔧
         run: |
@@ -19,3 +24,4 @@ jobs:
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          CI: "true"
