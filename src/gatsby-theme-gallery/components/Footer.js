@@ -30,9 +30,9 @@ const Footer = () => {
         <Button onClick={() => {
           setDogsLiked(add(dogsLiked, 1))
         }}>
-          Click to like dogs
+          Click to like cats
         </Button>
-        <span><span role='img' aria-label='dog'>🐕</span> liked: {dogsLiked}</span>
+        <span><span role='img' aria-label='dog'>🐈</span>'s liked: {dogsLiked}</span>
       </DogContainer>
       
       <p>{`© ${new Date().getFullYear()} ${siteMetadata.author}`}</p>

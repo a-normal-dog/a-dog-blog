@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: `Dog blog 🐶`,
+        title: `Spot the difference 😹`,
         author: "a-normal-dog"
     },
     pathPrefix: "/dog-blog",
